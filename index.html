@@ -68,7 +68,24 @@ footer{margin-top:40px;font-size:13px;color:var(--mut);display:flex;justify-cont
 @media(max-width:680px){.fbtn{display:inline-flex;margin-bottom:8px}.fbtn[aria-expanded=true]{background:var(--ink);color:#fff}#fv{display:none}#fv.open{display:flex}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 @media(max-width:680px){.dgrid{grid-template-columns:1fr}}
-.badge{display:inline-block;margin-left:6px;padding:1px 6px;border:1px solid var(--line);border-radius:999px;font-size:11px;font-weight:500;color:var(--mut);vertical-align:1px}.mb{display:none}@media(max-width:680px){.dk{display:none}.mb{display:inline;cursor:help}}.spark[hidden]{display:none}</style></head><body>
+.badge{display:inline-block;margin-left:6px;padding:1px 6px;border:1px solid var(--line);border-radius:999px;font-size:11px;font-weight:500;color:var(--mut);vertical-align:1px}.mb{display:none}@media(max-width:680px){.dk{display:none}.mb{display:inline;cursor:help}}.spark[hidden]{display:none}
+body{font-variant-numeric:tabular-nums}
+.hero{border:0;background:none;padding:0;border-radius:0;margin-top:28px}
+.hero h1{font-size:30px;max-width:820px}.hero .sub{font-size:17px;max-width:760px;margin:6px 0 0;color:var(--ink)}
+.kpis{gap:0;margin-top:24px;border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.kpis .k{padding:10px 16px 12px 0;text-align:right}.kpis .k+.k{border-left:1px solid var(--line);padding-left:16px}
+.kpis .l{display:block;font-size:12px;color:var(--mut);text-align:right}.kpis .v{font-size:30px;font-weight:650;line-height:1.15;letter-spacing:-.02em}
+.kpis .hi .v{color:var(--acc)}.g{display:block;font-size:11px}.kpis .n{font-size:11px;color:var(--mut)}
+.flat{border-top:1px solid var(--ink);padding-top:6px}
+.key{font-size:12px;color:var(--mut);margin:6px 0 4px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}.key .sw{margin-right:-8px}.acc{color:var(--acc)}
+.row{padding:7px 0}.bar{border-radius:2px;height:16px}.bar span{position:relative}
+.bar span[data-l]::after{content:attr(data-l);position:absolute;left:5px;top:0;font-size:11px;line-height:16px;color:#fff;font-weight:600}
+.pct{font-size:15px}
+.cta{display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.cta #ctanote{grid-column:1/-1}
+details{border:0;border-top:1px solid var(--line);border-radius:0;background:none;padding:10px 0;margin:0}
+h2{margin:28px 0 8px}#cat{font-size:19px}
+@media(max-width:680px){.kpis{grid-template-columns:repeat(2,1fr)}.kpis .k:nth-child(3){border-left:0;padding-left:0}.kpis .k:nth-child(n+3){border-top:1px solid var(--line)}.hero h1{font-size:23px}.cta{grid-template-columns:1fr}}
+[hidden]{display:none!important}</style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 17h6"/></symbol>
 <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
@@ -90,37 +107,32 @@ footer{margin-top:40px;font-size:13px;color:var(--mut);display:flex;justify-cont
 <span class="pill" id="upd"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg><span></span></span></header>
 
 <section class="card hero" aria-labelledby="h1">
-<h1 id="h1">Most top US retailers that refuse AI agents publish no policy on them</h1>
+<h1 id="h1">Most refusals of AI agents by top US retailers come with no published AI-agent policy</h1>
 <div class="sub" id="hsub"></div>
-<p class="def mut">Refused: the site returned an access error or challenge page to a labeled bot; cause not established. Policy: published rules for AI agents.</p>
 </section>
 
 <div class="kpis" id="kpis"></div>
 <div class="card spark" hidden><div><div style="font-weight:600">Trend</div><div class="mut" style="font-size:12px">Daily series begins Oct 30, 2026.</div></div></div>
 
-<h2 id="cat"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><span id="ctitle">Result mix by category; refusals without policy at right</span></h2>
-<p class="sub" id="csub">83 sites from the NRF Top 100 Retailers 2026, Oct 31, 2026. All shown categories are small samples (5 or 6 refusals each): directional only.</p>
-<section class="card" aria-labelledby="cat">
-<div class="chips" id="fs" role="group" aria-label="Filter by status"><span class="lbl">Status</span></div>
-<button class="chip fbtn" id="fbtn" aria-expanded="false" aria-controls="fv">Filter</button>
-<div class="chips" id="fv" role="group" aria-label="Filter by vertical"><span class="lbl">Vertical</span></div>
-<div class="chips"><button class="chip" id="cmp" aria-pressed="false">Compare to all</button></div>
+<h2 id="cat"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><span id="ctitle">In every category shown, most refusals came without a published policy</span></h2>
+<p class="sub" id="csub">Bars show each result as a share of sites. The right column shows refusals without policy. 83 sites from the NRF Top 100 Retailers 2026, Oct 31, 2026. Each category has only 5 or 6 refusals. Treat as directional.</p>
+<section class="flat" aria-labelledby="cat">
+<p class="key"><span class="sw" style="background:var(--c-block)"></span><b class="acc">Refused, no policy</b> <span class="sw" style="background:var(--c-dis)"></span>Explicit disallow <span class="sw" style="background:var(--c-ok)"></span>Allowed or OK <span class="sw hatch"></span>Error</p>
+<div class="chips" hidden id="fs" role="group" aria-label="Filter by status"><span class="lbl">Status</span></div>
+<button class="chip fbtn" hidden id="fbtn" aria-expanded="false" aria-controls="fv">Filter</button>
+<div class="chips" hidden id="fv" role="group" aria-label="Filter by vertical"><span class="lbl">Vertical</span></div>
+<div class="chips" hidden><button class="chip" id="cmp" aria-pressed="false">Compare to all</button></div>
 <div id="chart" role="table" aria-label="Result mix by category; refusals without policy at right"></div>
-<p class="src" id="srcline">Source: Agent Access Index, logged-out checks of 83 sites from the <a href="https://nrf.com/research-insights/top-retailers/top-100-retailers/top-100-retailers-2026-list" rel="noopener">NRF Top 100 Retailers 2026</a>, Oct 31, 2026.</p>
-<p class="mut" style="font-size:12px;margin:12px 0 0">8 refusals in categories with &lt;5 refusals are counted in totals only. Bars: share of all sites by result. Right column: share of refusals with no policy. Select a category for detail.</p>
+<p class="src" id="srcline">Source: <a href="https://nrf.com/research-insights/top-retailers/top-100-retailers/top-100-retailers-2026-list" rel="noopener">NRF Top 100 Retailers 2026</a>; checks Oct 31, 2026; n=83</p>
+<p class="mut" style="font-size:12px;margin:12px 0 0">8 refusals in categories with &lt;5 refusals are counted in totals only. Select a category for detail.</p>
 </section>
 
 <h2 id="lk"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Site-level detail</h2>
-<section class="card lock" aria-labelledby="lk">
-<table aria-hidden="true"><thead><tr><th>Site</th><th>Category</th><th>Observed</th><th>HTTP</th></tr></thead><tbody id="fake"></tbody></table>
-<div class="over"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>
-<div><b>Full site-level report</b><br><span class="mut">83 sites · daily refresh · status history</span></div>
-<a class="btn" id="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScYukIjtdoUHKAbPR_PF6Rcn-_-QXFUb2s7fFT-fSTxp5CREQ/viewform?usp=header" rel="noopener">Request full site-level report<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-<span class="mut" style="font-size:12px" id="ctanote">Opens a Google Form (company, role, use case). This page loads no analytics, cookies or third-party scripts.</span></div>
-</section>
+<section class="flat cta" aria-labelledby="lk"><div><b>Full site-level report</b><br><span class="mut">83 sites · daily refresh · status history</span></div><a class="btn" id="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScYukIjtdoUHKAbPR_PF6Rcn-_-QXFUb2s7fFT-fSTxp5CREQ/viewform?usp=header" rel="noopener">Request full site-level report<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><span class="mut" style="font-size:12px" id="ctanote">Opens a Google Form (company, role, use case). This page loads no analytics, cookies or third-party scripts.</span></section>
 
 <h2><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg>Notes</h2>
 <details id="d-def"><summary><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Definitions</summary><ul>
+<li><b>Refused</b>: the site returned an access error or challenge page to a labeled bot; cause not established. <b>Policy</b>: published rules for AI agents.</li>
 <li><b>Explicit disallow</b>: robots.txt has Disallow groups for AI agents or crawlers (or <code>*</code>).</li>
 <li><b>Allowed or OK</b>: AI user agents named and allowed, or no policy and the fetch succeeded.</li>
 <li><b>Refused, no policy</b>: no published AI-agent rules, and the site returned an access error or challenge page. Cause not established.</li>
@@ -142,12 +154,12 @@ const G=[["block","Refused, no policy","var(--c-block)",b=>b.no_policy_blocked||
 ["mix","Refused or error (n<5)","var(--c-err)",b=>b.no_policy_blocked_or_error||0,"hatch"]];
 const d=new Date(D.run_date+"T12:00:00Z");
 $("upd").lastElementChild.textContent=`Updated ${d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"})} · daily`;
-$("hsub").innerHTML=`<b>${T.blocked_no_policy} of ${T.blocked}</b> refusals came from sites with no AI-agent rules at the URLs checked, among 83 NRF Top 100 retailers checked Oct 31, 2026. Refusals mostly occur without a published policy.`;
-const kp=[["i-shield","Refused",pc(T.blocked,T.n),`${T.blocked} of ${T.n} sites`],
-["i-globe","Refused, no policy",pc(T.blocked_no_policy,T.blocked),`${T.blocked_no_policy} of ${T.blocked} refused`],
-["i-file","Serve llms.txt",pc(T.llms_txt,T.n),`${T.llms_txt} of ${T.n} sites`],
-["i-cart","Serve /.well-known/ucp",pc(T.ucp,T.n),`${T.ucp} of ${T.n} sites`]];
-$("kpis").innerHTML=kp.map(([i,l,v,s])=>`<div class="card"><div class="l"><svg class="ico" aria-hidden="true"><use href="#${i}"/></svg>${l}</div><div class="v">${v}</div><div class="mut" style="font-size:12px">${s}</div></div>`).join("");
+$("hsub").innerHTML=`AI agents are being turned away, usually with no stated rules to follow. <b>${T.blocked_no_policy} of ${T.blocked}</b> refusals came with no published AI-agent rules. Refusals mostly occur without a published policy. Base: 83 NRF Top 100 retailers, checked Oct 31, 2026.`;
+const kp=[["Refused",pc(T.blocked,T.n),`${T.blocked} of ${T.n} sites`,`n=${T.n}`],
+["Refused, no policy",pc(T.blocked_no_policy,T.blocked),`${T.blocked_no_policy} of ${T.blocked} refusals`,`n=${T.blocked}`],
+["Serve llms.txt <span class=\"g\">(AI-readable site guide)</span>",pc(T.llms_txt,T.n),`${T.llms_txt} of ${T.n} sites`,`n=${T.n}`],
+["Serve UCP <span class=\"g\">(agent checkout endpoint)</span>",pc(T.ucp,T.n),`${T.ucp} of ${T.n} sites`,`n=${T.n}`]];
+$("kpis").innerHTML=kp.map(([l,v,s,n],i)=>`<div class="k${i===1?" hi":""}"><div class="l">${l}</div><div class="v">${v}</div><div class="n">${s} · ${n}</div></div>`).join("");
 const DEF={block:"No published AI-agent rules, and the site returned an access error or challenge page. Cause not established.",
 dis:"robots.txt has Disallow groups for AI agents or crawlers (or *).",ok:"AI agents named and allowed, or no policy and the fetch succeeded.",
 err:"Timeout or network error. Recorded as an error, not a refusal.",mix:"Refused and error are combined because there were fewer than 5 refusals."};
@@ -162,7 +174,7 @@ $("fs").innerHTML='<span class="lbl">Status</span>'+used.map(g=>`<button class="
 $("fv").innerHTML='<span class="lbl">Vertical</span>'+SHOWN.map(c=>`<button class="chip" data-v="${esc(c.category)}" aria-pressed="${st.v.includes(c.category)}">${esc(c.category)}</button>`).join("");
 $("cmp").setAttribute("aria-pressed",st.cmp)}
 function seg(g,v,c,id){const p=Math.round(100*v/c.n),lab=`${g[1]}: ${v} of ${c.n} (${p}%)`;
-return `<span tabindex="0" class="${g[4]} ${st.s&&st.s!==g[0]?"dim":""}" style="width:${100*v/c.n}%;background:${g[2]}" aria-label="${esc(c.category)}, ${lab}" data-tip="<b>${esc(lab)}</b><br>${DEF[g[0]]}"></span>`}
+return `<span tabindex="0" class="${g[4]} ${st.s&&st.s!==g[0]?"dim":""}" style="width:${100*v/c.n}%;background:${g[2]}"${g[0]==="block"?` data-l="${v}"`:""} aria-label="${esc(c.category)}, ${lab}" data-tip="<b>${esc(lab)}</b><br>${DEF[g[0]]}"></span>`}
 function share(c){return c.blocked_suppressed?`<span class="pct na" role="cell" title="Fewer than 5 refusals">n&lt;5</span>`:`<span class="pct" role="cell">${c.blocked_no_policy}/${c.blocked}<span class="mut" style="font-weight:400;font-size:11px"> · ${c.blocked_no_policy_pct}%</span></span>`}
 function sowhat(c){if(c.blocked_suppressed)return"Fewer than 5 refusals; not compared.";const p=c.blocked_no_policy_pct,t=T.blocked_no_policy_pct;
 return p>t?`${p}% of refusals had no policy, vs ${t}% overall.`:p===t?`In line with overall (${p}%).`:`${p}% of refusals had no policy, vs ${t}% overall; policies are more common here.`}
@@ -170,7 +182,7 @@ function drawer(c){const b=c.buckets,P=(v,n)=>`${v} of ${n} (${Math.round(100*v/
 return `<div><p class="so">${sowhat(c)}</p><div class="dgrid">
 <div><h3>Result mix</h3><ul>${used.map(g=>[g,g[3](b)]).filter(x=>x[1]).map(([g,v])=>`<li>${g[1]}: ${P(v,c.n)}${g[0]==="mix"?"":cmp(v,c.n,g[3](T.buckets))}</li>`).join("")}</ul></div>
 <div><h3>robots.txt</h3><ul><li>Disallow for agents (or *): ${b.disallow_agents}</li><li>Disallow for training crawlers only: ${b.disallow_training_only}</li><li>Named agents allowed: ${b.named_allowed}</li></ul></div>
-<div><h3>Agent signals</h3><ul><li>llms.txt: ${P(c.llms_txt,c.n)}${cmp(c.llms_txt,c.n,T.llms_txt)}</li><li>/.well-known/ucp: ${P(c.ucp,c.n)}${cmp(c.ucp,c.n,T.ucp)}</li></ul></div></div></div>`}
+<div><h3>Agent signals</h3><ul><li>llms.txt (AI-readable site guide): ${P(c.llms_txt,c.n)}${cmp(c.llms_txt,c.n,T.llms_txt)}</li><li>UCP (agent checkout endpoint): ${P(c.ucp,c.n)}${cmp(c.ucp,c.n,T.ucp)}</li></ul></div></div></div>`}
 function row(c,id,ref){const parts=used.map(g=>[g,g[3](c.buckets)]).filter(x=>x[1]),open=st.open===c.category&&!ref;
 const name=ref?`<span role="rowheader"><b>All sites</b> <span class="mut">(${c.n})</span></span>`:`<span role="rowheader"><button class="rowbtn" aria-expanded="${open}" aria-controls="dr${id}" data-c="${esc(c.category)}"><svg class="ico chev" aria-hidden="true"><use href="#i-chev"/></svg>${esc(c.category)} <span class="mut">(${c.n})</span>${c.small_sample||c.blocked<10?'<span class="badge" title="Small sample (few refusals or n under 15): directional only">small sample</span>':""}</button></span>`;
 return `<div class="row ${ref?"ref":""}" role="row">${name}<div class="bar" role="cell">${parts.map(([g,v])=>seg(g,v,c,id)).join("")}</div>${share(c)}${ref?"":`<div class="drawer ${open?"open":""}" id="dr${id}" role="region" aria-label="${esc(c.category)} breakdown" ${open?"":"hidden"}>${drawer(c)}</div>`}</div>`}
@@ -195,6 +207,4 @@ document.addEventListener("keydown",e=>{if(MOB.matches&&(e.key==="Enter"||e.key=
 $("fbtn").addEventListener("click",()=>{const o=$("fbtn").getAttribute("aria-expanded")!=="true";$("fbtn").setAttribute("aria-expanded",o);$("fv").classList.toggle("open",o)});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")hide()});let shownAt=0;addEventListener("scroll",()=>{if(Date.now()-shownAt>400)hide()},{passive:true});
 addEventListener("hashchange",()=>{readHash();render()});readHash();render();
-const cats=["Marketplace","Retailer","Supplier","Brand","Grocer","Travel"],obs=["No policy, OK","Refused, no policy","Explicit disallow","Allowed"],hs=[200,403,200,429];
-$("fake").innerHTML=Array.from({length:8},(_,i)=>`<tr><td>${cats[i%6]} ${"ABCDEFGH"[i]}</td><td>${cats[i%6].toLowerCase()}</td><td>${obs[i%4]}</td><td>${hs[i%4]}</td></tr>`).join("");
 </script></body></html>
