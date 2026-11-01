@@ -107,15 +107,15 @@ h2{margin:28px 0 8px}#cat{font-size:19px}
 <span class="pill" id="upd"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg><span></span></span></header>
 
 <section class="card hero" aria-labelledby="h1">
-<h1 id="h1">Most refusals of AI agents by top US retailers come with no published AI-agent policy</h1>
+<h1 id="h1">Most top US retailers that refuse AI agents publish no policy on them</h1>
 <div class="sub" id="hsub"></div>
 </section>
 
 <div class="kpis" id="kpis"></div>
 <div class="card spark" hidden><div><div style="font-weight:600">Trend</div><div class="mut" style="font-size:12px">Daily series begins Oct 30, 2026.</div></div></div>
 
-<h2 id="cat"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><span id="ctitle">In every category shown, most refusals came without a published policy</span></h2>
-<p class="sub" id="csub">Bars show each result as a share of sites. The right column shows refusals without policy. 83 sites from the NRF Top 100 Retailers 2026, Oct 31, 2026. Each category has only 5 or 6 refusals. Treat as directional.</p>
+<h2 id="cat"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><span id="ctitle">Refusals without a published policy, by category</span></h2>
+<p class="sub" id="csub">Bars: all sites checked. Right: refusals with no policy. 5–6 refusals per category; directional only.</p>
 <section class="flat" aria-labelledby="cat">
 <p class="key"><span class="sw" style="background:var(--c-block)"></span><b class="acc">Refused, no policy</b> <span class="sw" style="background:var(--c-dis)"></span>Explicit disallow <span class="sw" style="background:var(--c-ok)"></span>Allowed or OK <span class="sw hatch"></span>Error</p>
 <div class="chips" hidden id="fs" role="group" aria-label="Filter by status"><span class="lbl">Status</span></div>
@@ -128,7 +128,7 @@ h2{margin:28px 0 8px}#cat{font-size:19px}
 </section>
 
 <h2 id="lk"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Site-level detail</h2>
-<section class="flat cta" aria-labelledby="lk"><div><b>Full site-level report</b><br><span class="mut">83 sites · daily refresh · status history</span></div><a class="btn" id="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScYukIjtdoUHKAbPR_PF6Rcn-_-QXFUb2s7fFT-fSTxp5CREQ/viewform?usp=header" rel="noopener">Request full site-level report<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><span class="mut" style="font-size:12px" id="ctanote">Opens a Google Form (company, role, use case). This page loads no analytics, cookies or third-party scripts.</span></section>
+<section class="flat cta" aria-labelledby="lk"><div><b>Full site-level report</b><br><span class="mut">83 sites · daily refresh · status history</span></div><a class="btn" id="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScYukIjtdoUHKAbPR_PF6Rcn-_-QXFUb2s7fFT-fSTxp5CREQ/viewform?usp=header" rel="noopener">Request site-level data<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><span class="mut" style="font-size:12px" id="ctanote">Opens a Google Form (company, role, use case). This page loads no analytics, cookies or third-party scripts.</span></section>
 
 <h2><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg>Notes</h2>
 <details id="d-def"><summary><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Definitions</summary><ul>
@@ -154,7 +154,7 @@ const G=[["block","Refused, no policy","var(--c-block)",b=>b.no_policy_blocked||
 ["mix","Refused or error (n<5)","var(--c-err)",b=>b.no_policy_blocked_or_error||0,"hatch"]];
 const d=new Date(D.run_date+"T12:00:00Z");
 $("upd").lastElementChild.textContent=`Updated ${d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"})} · daily`;
-$("hsub").innerHTML=`AI agents are often turned away with no stated rules to follow. Base: 83 NRF Top 100 retailers, checked Oct 31, 2026.`;
+$("hsub").innerHTML=`<b>86%</b> of refusals came from sites with no published AI-agent rules.<br>Base: 83 NRF Top 100 retailers, checked Oct 31, 2026.`;
 const kp=[["Refused",pc(T.blocked,T.n),`${T.blocked} of ${T.n} sites`,`n=${T.n}`],
 ["Refused, no policy",pc(T.blocked_no_policy,T.blocked),`${T.blocked_no_policy} of ${T.blocked} refusals`,`n=${T.blocked}`],
 ["Serve llms.txt <span class=\"g\">(AI-readable site guide)</span>",pc(T.llms_txt,T.n),`${T.llms_txt} of ${T.n} sites`,`n=${T.n}`],
