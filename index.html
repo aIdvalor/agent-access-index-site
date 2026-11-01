@@ -1,0 +1,200 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agent Access Index: most sites that refuse AI agents publish no policy on them</title>
+<meta name="description" content="53 of 59 refusals (90%) came from sites with no AI-agent policy at checked URLs. 160 sites, Oct 31, 2026.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Most sites that refuse AI agents publish no policy on them">
+<meta property="og:description" content="53 of 59 refusals (90%) came from sites with no AI-agent policy at checked URLs. 160 sites, Oct 31, 2026.">
+<meta property="og:url" content="https://aidvalor.github.io/agent-access-index-site/">
+<meta property="og:image" content="https://aidvalor.github.io/agent-access-index-site/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="90% of refusals had no AI-agent policy. n=160, Oct 31, 2026.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Most sites that refuse AI agents publish no policy on them">
+<meta name="twitter:description" content="53 of 59 refusals (90%) came from sites with no AI-agent policy at checked URLs. 160 sites, Oct 31, 2026.">
+<meta name="twitter:image" content="https://aidvalor.github.io/agent-access-index-site/og.png">
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#111;--mut:#595959;--line:#e5e5e5;--acc:#4338ca;
+--c-block:#4338ca;--c-dis:#1f1f1f;--c-ok:#3f8f63;--c-err:#d9d9d9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Inter,sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:960px;margin:0 auto;padding:40px 20px 56px}
+.ico{width:16px;height:16px;vertical-align:-3px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{display:flex;gap:8px;align-items:center;font-weight:600}.mut{color:var(--mut)}
+.pill{display:inline-flex;gap:6px;align-items:center;font-size:12px;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--card)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.hero{margin-top:20px;padding:28px}
+.hero h1{font-size:28px;line-height:1.2;letter-spacing:-.02em;margin:0 0 6px;font-weight:650}
+.hero .sub{font-size:18px}.hero .sub b{color:var(--acc)}.why{margin-top:12px;max-width:640px}
+.def{font-size:12px;margin-top:8px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+.kpis .card{padding:14px}.kpis .v{font-size:24px;font-weight:650;letter-spacing:-.02em}.kpis .l{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--mut)}
+.spark{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:12px}
+h2{display:flex;gap:8px;align-items:center;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:32px 0 10px}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:0;list-style:none}
+.legend li{display:inline-flex;align-items:center;gap:6px;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.sw{width:10px;height:10px;border-radius:2px;display:inline-block}
+.hatch{background:repeating-linear-gradient(45deg,#bdbdbd 0 2px,#f2f2f2 2px 5px)!important}
+.row{display:grid;grid-template-columns:200px 1fr 92px;gap:12px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.row.h{border-top:0;font-size:12px;color:var(--mut)}
+.bar{display:flex;height:14px;border-radius:4px;overflow:hidden;background:var(--line)}.bar span{height:100%}
+.pct{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}.pct.na{font-weight:400;color:var(--mut)}
+.lock{position:relative;overflow:hidden;min-height:300px}.lock table{width:100%;border-collapse:collapse;filter:blur(5px);user-select:none}
+.lock td,.lock th{text-align:left;padding:8px;border-bottom:1px solid var(--line)}
+.over{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#fafafae0;text-align:center;padding:16px}
+.over .ico{width:28px;height:28px}
+.btn{display:inline-flex;gap:8px;align-items:center;background:var(--acc);color:#fff;text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:600}
+.btn:hover{background:#3730a3}
+a{color:var(--acc)}:focus-visible{outline:3px solid #f59e0b;outline-offset:2px;border-radius:6px}
+details{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:12px 18px;margin-top:10px}
+summary{cursor:pointer;font-weight:600;display:flex;gap:8px;align-items:center}details p,details li{color:var(--mut)}
+footer{margin-top:40px;font-size:13px;color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media(max-width:680px){.hero h1{font-size:22px}.kpis{grid-template-columns:repeat(2,1fr)}
+.row{grid-template-columns:1fr auto}.row .bar{grid-column:1/-1;grid-row:2}.row.h .bh{display:none}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}.chips .lbl{font-size:12px;color:var(--mut);margin-right:4px;align-self:center}
+.chip{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:3px 10px;cursor:pointer;display:inline-flex;gap:6px;align-items:center;transition:background .15s,border-color .15s}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rowbtn{all:unset;display:flex;gap:6px;align-items:center;cursor:pointer;border-radius:6px}
+.chev{width:14px;height:14px;transition:transform .18s ease}.rowbtn[aria-expanded=true] .chev{transform:rotate(90deg)}
+.bar span{transition:opacity .15s}.bar span:focus-visible{outline:2px solid #f59e0b;outline-offset:1px}.bar .dim{opacity:.18}
+.row.ref{background:#f4f4f5}.drawer{grid-column:1/-1;overflow:hidden;display:grid;grid-template-rows:0fr;transition:grid-template-rows .18s ease}
+.drawer.open{grid-template-rows:1fr}.drawer>div{min-height:0}.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:12px 0 6px}
+.dgrid h3{font-size:12px;font-weight:600;color:var(--mut);margin:0 0 4px}.dgrid ul{margin:0;padding:0;list-style:none;font-size:13px}.so{font-weight:600;margin:6px 0 4px}
+#tip{position:fixed;z-index:9;pointer-events:none;background:var(--ink);color:#fff;font-size:12px;padding:8px 10px;border-radius:8px;max-width:260px;opacity:0;transition:opacity .15s}
+#tip.on{opacity:1}#tip.pin{pointer-events:auto;max-width:none}
+.sub{margin:-4px 0 12px;font-size:13px;color:var(--mut)}.src{font-size:11px;color:var(--mut);border-top:1px solid var(--line);padding-top:6px;margin:10px 0 0}
+.hn{display:block;font-size:10px;color:var(--mut)}.callout{grid-column:2/-1;font-size:11px;font-weight:600;color:var(--c-block);margin-top:-2px}
+.fbtn{display:none}#cat{text-transform:none;letter-spacing:0;font-size:20px;line-height:1.25;color:var(--ink);font-weight:700;align-items:flex-start}
+@media(max-width:680px){.fbtn{display:inline-flex;margin-bottom:8px}.fbtn[aria-expanded=true]{background:var(--ink);color:#fff}#fv{display:none}#fv.open{display:flex}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+@media(max-width:680px){.dgrid{grid-template-columns:1fr}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 17h6"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 9l6 6M15 9l-6 6"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 4h2l2.5 11h11L21 8H7"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16v-5M12 16V8M16 16v-3"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h14v16H6a2 2 0 00-2 2zM4 5v16"/></symbol>
+<symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 20h16L14 9V3"/></symbol>
+<symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7a3 3 0 006 0zM19 7l-3 7a3 3 0 006 0zM8 21h8"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></symbol>
+</defs></svg>
+<main>
+<header class="top"><div class="brand"><svg class="ico" aria-hidden="true"><use href="#i-bot"/></svg>Agent Access Index</div>
+<span class="pill" id="upd"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg><span></span></span></header>
+
+<section class="card hero" aria-labelledby="h1">
+<h1 id="h1">Most sites that refuse AI agents publish no policy on them</h1>
+<div class="sub" id="hsub"></div>
+<p class="def mut">Refused: the site returned an access error or challenge page to a labeled bot; cause not established. Policy: published rules for AI agents.</p>
+</section>
+
+<div class="kpis" id="kpis"></div>
+<div class="card spark"><div><div style="font-weight:600">Trend</div><div class="mut" style="font-size:12px">Daily series begins Oct 30, 2026.</div></div></div>
+
+<h2 id="cat"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><span id="ctitle">Share of refusals without an AI-agent policy, by category</span></h2>
+<p class="sub" id="csub">160 sites, Oct 31, 2026. Categories with fewer than 5 refusals not shown.</p>
+<section class="card" aria-labelledby="cat">
+<div class="chips" id="fs" role="group" aria-label="Filter by status"><span class="lbl">Status</span></div>
+<button class="chip fbtn" id="fbtn" aria-expanded="false" aria-controls="fv">Filter</button>
+<div class="chips" id="fv" role="group" aria-label="Filter by vertical"><span class="lbl">Vertical</span></div>
+<div class="chips"><button class="chip" id="cmp" aria-pressed="false">Compare to all</button></div>
+<div id="chart" role="table" aria-label="Share of refusals without an AI-agent policy, by category"></div>
+<p class="src" id="srcline">Source: Agent Access Index, logged-out daily checks of 160 commerce sites, Oct 31, 2026.</p>
+<p class="mut" style="font-size:12px;margin:12px 0 0">Bars: share of all sites by result. Right column: share of refusals with no policy. Select a category for detail.</p>
+</section>
+
+<h2 id="lk"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Site-level detail</h2>
+<section class="card lock" aria-labelledby="lk">
+<table aria-hidden="true"><thead><tr><th>Site</th><th>Category</th><th>Observed</th><th>HTTP</th></tr></thead><tbody id="fake"></tbody></table>
+<div class="over"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>
+<div><b>Full site-level report</b><br><span class="mut">160 sites · daily refresh · status history</span></div>
+<a class="btn" id="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScYukIjtdoUHKAbPR_PF6Rcn-_-QXFUb2s7fFT-fSTxp5CREQ/viewform?usp=header" rel="noopener">Request full site-level report<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+<span class="mut" style="font-size:12px" id="ctanote">Opens a Google Form (company, role, use case). This page loads no analytics, cookies or third-party scripts.</span></div>
+</section>
+
+<h2><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg>Notes</h2>
+<details id="d-def"><summary><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Definitions</summary><ul>
+<li><b>Explicit disallow</b>: robots.txt has Disallow groups for AI agents or crawlers (or <code>*</code>).</li>
+<li><b>Allowed or OK</b>: AI user agents named and allowed, or no policy and the fetch succeeded.</li>
+<li><b>Refused, no policy</b>: no published AI-agent rules, and the site returned an access error or challenge page. Cause not established.</li>
+<li><b>Error</b>: timeout or network error, recorded as an error, not a refusal.</li></ul></details>
+<details id="d-meth"><summary><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg>Method</summary><p>A logged-out daily check of public policy files (robots.txt, llms.txt, /.well-known) and the homepage response for 160 hand-picked retail and commerce sites, aggregated by category. n=160, Oct 31, 2026. Dated observations, not statements of intent.</p></details>
+<details id="d-disc"><summary><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg>Disclaimer</summary><p>Independent, non-commercial research. Not affiliated with any company studied or any current or former employer of the author. No logins, CAPTCHAs, rate limits or refusals bypassed. robots.txt is a voluntary standard (RFC 9309), not a contract. Not legal advice. Brand names identify sites only. Corrections or opt-out: use the request form above.</p></details>
+
+<footer><span>Built by <a href="https://www.linkedin.com/in/vladyslav-ilchenko/" rel="author">Vladyslav Ilchenko <svg class="ico" aria-hidden="true"><use href="#i-in"/></svg></a></span>
+<span>© 2026 Vladyslav Ilchenko</span></footer>
+</main>
+<div id="tip" role="tooltip"></div>
+<script src="data.js"></script>
+<script>
+const D=window.AAI,T=D.totals,$=id=>document.getElementById(id),pc=(a,b)=>b?Math.round(100*a/b)+"%":"–";
+const G=[["block","Refused, no policy","var(--c-block)",b=>b.no_policy_blocked||0,""],
+["dis","Explicit disallow","var(--c-dis)",b=>b.disallow_agents+b.disallow_training_only,""],
+["ok","Allowed or OK","var(--c-ok)",b=>b.named_allowed+b.no_policy_ok,""],
+["err","Error","var(--c-err)",b=>b.no_policy_error||0,"hatch"],
+["mix","Refused or error (n<5)","var(--c-err)",b=>b.no_policy_blocked_or_error||0,"hatch"]];
+const d=new Date(D.run_date+"T12:00:00Z");
+$("upd").lastElementChild.textContent=`Updated ${d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"})} · daily`;
+$("hsub").innerHTML=`<b>${T.blocked_no_policy} of ${T.blocked}</b> refusals came from sites with no AI-agent rules at the URLs checked. Access is being set by bot defenses, not stated policy.`;
+const kp=[["i-shield","Refused",pc(T.blocked,T.n),`${T.blocked} of ${T.n} sites`],
+["i-globe","Refused, no policy",pc(T.blocked_no_policy,T.blocked),`${T.blocked_no_policy} of ${T.blocked} refused`],
+["i-file","Serve llms.txt",pc(T.llms_txt,T.n),`${T.llms_txt} of ${T.n} sites`],
+["i-cart","Serve /.well-known/ucp",pc(T.ucp,T.n),`${T.ucp} of ${T.n} sites`]];
+$("kpis").innerHTML=kp.map(([i,l,v,s])=>`<div class="card"><div class="l"><svg class="ico" aria-hidden="true"><use href="#${i}"/></svg>${l}</div><div class="v">${v}</div><div class="mut" style="font-size:12px">${s}</div></div>`).join("");
+const DEF={block:"No published AI-agent rules, and the site returned an access error or challenge page. Cause not established.",
+dis:"robots.txt has Disallow groups for AI agents or crawlers (or *).",ok:"AI agents named and allowed, or no policy and the fetch succeeded.",
+err:"Timeout or network error. Recorded as an error, not a refusal.",mix:"Refused and error are combined because there were fewer than 5 refusals."};
+const SHOWN=D.categories.filter(c=>!c.blocked_suppressed);
+const used=G.filter(g=>SHOWN.some(c=>g[3](c.buckets)));
+const st={v:[],s:"",cmp:false,open:""};
+function readHash(){const h=new URLSearchParams(location.hash.slice(1));st.v=(h.get("v")||"").split(",").filter(Boolean);st.s=h.get("s")||"";st.cmp=h.get("cmp")==="1";st.open=h.get("open")||""}
+function writeHash(){const h=new URLSearchParams();if(st.v.length)h.set("v",st.v.join(","));if(st.s)h.set("s",st.s);if(st.cmp)h.set("cmp","1");if(st.open)h.set("open",st.open);history.replaceState(null,"","#"+h.toString())}
+const esc=t=>String(t).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[m]);
+function chips(){
+$("fs").innerHTML='<span class="lbl">Status</span>'+used.map(g=>`<button class="chip" data-s="${g[0]}" aria-pressed="${st.s===g[0]}"><span class="sw ${g[4]}" style="background:${g[2]}" aria-hidden="true"></span>${g[1]}</button>`).join("");
+$("fv").innerHTML='<span class="lbl">Vertical</span>'+SHOWN.map(c=>`<button class="chip" data-v="${esc(c.category)}" aria-pressed="${st.v.includes(c.category)}">${esc(c.category)}</button>`).join("");
+$("cmp").setAttribute("aria-pressed",st.cmp)}
+function seg(g,v,c,id){const p=Math.round(100*v/c.n),lab=`${g[1]}: ${v} of ${c.n} (${p}%)`;
+return `<span tabindex="0" class="${g[4]} ${st.s&&st.s!==g[0]?"dim":""}" style="width:${100*v/c.n}%;background:${g[2]}" aria-label="${esc(c.category)}, ${lab}" data-tip="<b>${esc(lab)}</b><br>${DEF[g[0]]}"></span>`}
+function share(c){return c.blocked_suppressed?`<span class="pct na" role="cell" title="Fewer than 5 refusals">n&lt;5</span>`:`<span class="pct" role="cell">${c.blocked_no_policy_pct}%<span class="mut" style="font-weight:400;font-size:12px"> · ${c.blocked_no_policy}/${c.blocked}</span></span>`}
+function sowhat(c){if(c.blocked_suppressed)return"Fewer than 5 refusals; not compared.";const p=c.blocked_no_policy_pct,t=T.blocked_no_policy_pct;
+return p>t?`${p}% of refusals had no policy, vs ${t}% overall.`:p===t?`In line with overall (${p}%).`:`${p}% of refusals had no policy, vs ${t}% overall; policies are more common here.`}
+function drawer(c){const b=c.buckets,P=(v,n)=>`${v} of ${n} (${Math.round(100*v/n)}%)`,cmp=(v,n,tv)=>st.cmp?` <span class="mut">· all ${Math.round(100*tv/T.n)}%</span>`:"";
+return `<div><p class="so">${sowhat(c)}</p><div class="dgrid">
+<div><h3>Result mix</h3><ul>${used.map(g=>[g,g[3](b)]).filter(x=>x[1]).map(([g,v])=>`<li>${g[1]}: ${P(v,c.n)}${g[0]==="mix"?"":cmp(v,c.n,g[3](T.buckets))}</li>`).join("")}</ul></div>
+<div><h3>robots.txt</h3><ul><li>Disallow for agents (or *): ${b.disallow_agents}</li><li>Disallow for training crawlers only: ${b.disallow_training_only}</li><li>Named agents allowed: ${b.named_allowed}</li></ul></div>
+<div><h3>Agent signals</h3><ul><li>llms.txt: ${P(c.llms_txt,c.n)}${cmp(c.llms_txt,c.n,T.llms_txt)}</li><li>/.well-known/ucp: ${P(c.ucp,c.n)}${cmp(c.ucp,c.n,T.ucp)}</li></ul></div></div></div>`}
+function row(c,id,ref){const parts=used.map(g=>[g,g[3](c.buckets)]).filter(x=>x[1]),open=st.open===c.category&&!ref;
+const name=ref?`<span role="rowheader"><b>All sites</b> <span class="mut">(${c.n})</span></span>`:`<span role="rowheader"><button class="rowbtn" aria-expanded="${open}" aria-controls="dr${id}" data-c="${esc(c.category)}"><svg class="ico chev" aria-hidden="true"><use href="#i-chev"/></svg>${esc(c.category)} <span class="mut">(${c.n})</span></button></span>`;
+return `<div class="row ${ref?"ref":""}" role="row">${name}<div class="bar" role="cell">${parts.map(([g,v])=>seg(g,v,c,id)).join("")}</div>${share(c)}${ref?"":`<div class="drawer ${open?"open":""}" id="dr${id}" role="region" aria-label="${esc(c.category)} breakdown" ${open?"":"hidden"}>${drawer(c)}</div>`}</div>`}
+function render(){chips();const cs=SHOWN.filter(c=>!st.v.length||st.v.includes(c.category));
+const tot={...T,category:"All",blocked_suppressed:false};
+$("chart").innerHTML=`<div class="row h" role="row"><span role="columnheader">Category (n)</span><span class="bh" role="columnheader">Result mix</span><span class="pct" role="columnheader" style="font-weight:400">Of refusals: no policy<span class="hn">bar = share of all sites</span></span></div>`+(st.cmp?row(tot,"all",true):"")+cs.map((c,i)=>row(c,i,false)).join("");writeHash()}
+document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;
+if(t.dataset.s!==undefined){st.s=st.s===t.dataset.s?"":t.dataset.s;render();document.querySelector(`[data-s="${t.dataset.s}"]`).focus()}
+else if(t.dataset.v!==undefined){const v=t.dataset.v;st.v=st.v.includes(v)?st.v.filter(x=>x!==v):[...st.v,v];render();document.querySelector(`[data-v="${CSS.escape(v)}"]`).focus()}
+else if(t.id==="cmp"){st.cmp=!st.cmp;render();$("cmp").focus()}
+else if(t.dataset.c!==undefined){const c=t.dataset.c;st.open=st.open===c?"":c;
+document.querySelectorAll(".rowbtn").forEach(b=>{const on=b.dataset.c===st.open,d=$(b.getAttribute("aria-controls"));b.setAttribute("aria-expanded",on);
+if(on){d.hidden=false;requestAnimationFrame(()=>d.classList.add("open"))}else if(d.classList.contains("open")){d.classList.remove("open");setTimeout(()=>{if(!d.classList.contains("open"))d.hidden=true},180)}});writeHash()}});
+const MOB=matchMedia("(max-width:680px)");let pinned=null;
+const tip=$("tip");function show(el){if(MOB.matches){const r=el.closest(".row").getBoundingClientRect();shownAt=Date.now();tip.innerHTML=el.dataset.tip;tip.classList.add("on","pin");tip.style.left="12px";tip.style.right="12px";tip.style.top=(r.bottom+6)+"px";return}tip.classList.remove("pin");tip.style.right="";const r=el.getBoundingClientRect();shownAt=Date.now();tip.innerHTML=el.dataset.tip;tip.classList.add("on");
+const w=tip.offsetWidth;tip.style.left=Math.max(8,Math.min(innerWidth-w-8,r.left+r.width/2-w/2))+"px";tip.style.top=(r.top-tip.offsetHeight-8<0?r.bottom+8:r.top-tip.offsetHeight-8)+"px"}
+const hide=()=>{pinned=null;tip.classList.remove("on")};
+["mouseover","focusin"].forEach(ev=>document.addEventListener(ev,e=>{if(MOB.matches)return;const s=e.target.closest&&e.target.closest("[data-tip]");s?show(s):hide()}));
+document.addEventListener("pointerup",e=>{if(!MOB.matches&&e.pointerType!=="touch")return;const s=e.target.closest("[data-tip]");
+if(s&&s!==pinned){setTimeout(()=>{show(s);pinned=s},0)}else if(!e.target.closest("#tip"))hide()});
+document.addEventListener("keydown",e=>{if(MOB.matches&&(e.key==="Enter"||e.key===" ")&&e.target.dataset&&e.target.dataset.tip){e.preventDefault();show(e.target);pinned=e.target}});
+$("fbtn").addEventListener("click",()=>{const o=$("fbtn").getAttribute("aria-expanded")!=="true";$("fbtn").setAttribute("aria-expanded",o);$("fv").classList.toggle("open",o)});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")hide()});let shownAt=0;addEventListener("scroll",()=>{if(Date.now()-shownAt>400)hide()},{passive:true});
+addEventListener("hashchange",()=>{readHash();render()});readHash();render();
+const cats=["Marketplace","Retailer","Supplier","Brand","Grocer","Travel"],obs=["No policy, OK","Refused, no policy","Explicit disallow","Allowed"],hs=[200,403,200,429];
+$("fake").innerHTML=Array.from({length:8},(_,i)=>`<tr><td>${cats[i%6]} ${"ABCDEFGH"[i]}</td><td>${cats[i%6].toLowerCase()}</td><td>${obs[i%4]}</td><td>${hs[i%4]}</td></tr>`).join("");
+</script></body></html>
