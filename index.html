@@ -14,7 +14,7 @@
 <meta name="twitter:image" content="https://aidvalor.github.io/agent-access-index-site/og.png">
 <style>
 :root{--bg:#fafafa;--card:#fff;--ink:#111;--mut:#595959;--line:#e5e5e5;--acc:#4338ca;
---c-block:#4338ca;--c-dis:#1f1f1f;--c-ok:#3f8f63;--c-err:#d9d9d9}
+--c-block:#4338ca;--c-dis:#4b4b4b;--c-ok:#c9c9c9;--c-err:#ececec}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Inter,sans-serif;-webkit-font-smoothing:antialiased}
 main{max-width:960px;margin:0 auto;padding:40px 20px 56px}
 .ico{width:16px;height:16px;vertical-align:-3px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -68,7 +68,7 @@ footer{margin-top:40px;font-size:13px;color:var(--mut);display:flex;justify-cont
 @media(max-width:680px){.fbtn{display:inline-flex;margin-bottom:8px}.fbtn[aria-expanded=true]{background:var(--ink);color:#fff}#fv{display:none}#fv.open{display:flex}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 @media(max-width:680px){.dgrid{grid-template-columns:1fr}}
-.badge{display:inline-block;margin-left:6px;padding:1px 6px;border:1px solid var(--line);border-radius:999px;font-size:11px;font-weight:500;color:var(--mut);vertical-align:1px}</style></head><body>
+.badge{display:inline-block;margin-left:6px;padding:1px 6px;border:1px solid var(--line);border-radius:999px;font-size:11px;font-weight:500;color:var(--mut);vertical-align:1px}.mb{display:none}@media(max-width:680px){.dk{display:none}.mb{display:inline;cursor:help}}.spark[hidden]{display:none}</style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 17h6"/></symbol>
 <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
@@ -96,18 +96,18 @@ footer{margin-top:40px;font-size:13px;color:var(--mut);display:flex;justify-cont
 </section>
 
 <div class="kpis" id="kpis"></div>
-<div class="card spark"><div><div style="font-weight:600">Trend</div><div class="mut" style="font-size:12px">Daily series begins Oct 30, 2026.</div></div></div>
+<div class="card spark" hidden><div><div style="font-weight:600">Trend</div><div class="mut" style="font-size:12px">Daily series begins Oct 30, 2026.</div></div></div>
 
-<h2 id="cat"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><span id="ctitle">Share of refusals without an AI-agent policy, by category</span></h2>
-<p class="sub" id="csub">83 sites from the NRF Top 100 Retailers 2026, Oct 31, 2026. Categories with fewer than 5 refusals count in totals only. Small sample: n&lt;15, directional only.</p>
+<h2 id="cat"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><span id="ctitle">Result mix by category; refusals without policy at right</span></h2>
+<p class="sub" id="csub">83 sites from the NRF Top 100 Retailers 2026, Oct 31, 2026. All shown categories are small samples (5 or 6 refusals each): directional only.</p>
 <section class="card" aria-labelledby="cat">
 <div class="chips" id="fs" role="group" aria-label="Filter by status"><span class="lbl">Status</span></div>
 <button class="chip fbtn" id="fbtn" aria-expanded="false" aria-controls="fv">Filter</button>
 <div class="chips" id="fv" role="group" aria-label="Filter by vertical"><span class="lbl">Vertical</span></div>
 <div class="chips"><button class="chip" id="cmp" aria-pressed="false">Compare to all</button></div>
-<div id="chart" role="table" aria-label="Share of refusals without an AI-agent policy, by category"></div>
+<div id="chart" role="table" aria-label="Result mix by category; refusals without policy at right"></div>
 <p class="src" id="srcline">Source: Agent Access Index, logged-out checks of 83 sites from the <a href="https://nrf.com/research-insights/top-retailers/top-100-retailers/top-100-retailers-2026-list" rel="noopener">NRF Top 100 Retailers 2026</a>, Oct 31, 2026.</p>
-<p class="mut" style="font-size:12px;margin:12px 0 0">Bars: share of all sites by result. Right column: share of refusals with no policy. Select a category for detail.</p>
+<p class="mut" style="font-size:12px;margin:12px 0 0">8 refusals in categories with &lt;5 refusals are counted in totals only. Bars: share of all sites by result. Right column: share of refusals with no policy. Select a category for detail.</p>
 </section>
 
 <h2 id="lk"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Site-level detail</h2>
@@ -142,7 +142,7 @@ const G=[["block","Refused, no policy","var(--c-block)",b=>b.no_policy_blocked||
 ["mix","Refused or error (n<5)","var(--c-err)",b=>b.no_policy_blocked_or_error||0,"hatch"]];
 const d=new Date(D.run_date+"T12:00:00Z");
 $("upd").lastElementChild.textContent=`Updated ${d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"})} · daily`;
-$("hsub").innerHTML=`<b>${T.blocked_no_policy} of ${T.blocked}</b> refusals came from top US retailers with no AI-agent rules at the URLs checked. Access is being set by bot defenses, not stated policy.`;
+$("hsub").innerHTML=`<b>${T.blocked_no_policy} of ${T.blocked}</b> refusals came from sites with no AI-agent rules at the URLs checked, among 83 NRF Top 100 retailers checked Oct 31, 2026. Refusals mostly occur without a published policy.`;
 const kp=[["i-shield","Refused",pc(T.blocked,T.n),`${T.blocked} of ${T.n} sites`],
 ["i-globe","Refused, no policy",pc(T.blocked_no_policy,T.blocked),`${T.blocked_no_policy} of ${T.blocked} refused`],
 ["i-file","Serve llms.txt",pc(T.llms_txt,T.n),`${T.llms_txt} of ${T.n} sites`],
@@ -163,7 +163,7 @@ $("fv").innerHTML='<span class="lbl">Vertical</span>'+SHOWN.map(c=>`<button clas
 $("cmp").setAttribute("aria-pressed",st.cmp)}
 function seg(g,v,c,id){const p=Math.round(100*v/c.n),lab=`${g[1]}: ${v} of ${c.n} (${p}%)`;
 return `<span tabindex="0" class="${g[4]} ${st.s&&st.s!==g[0]?"dim":""}" style="width:${100*v/c.n}%;background:${g[2]}" aria-label="${esc(c.category)}, ${lab}" data-tip="<b>${esc(lab)}</b><br>${DEF[g[0]]}"></span>`}
-function share(c){return c.blocked_suppressed?`<span class="pct na" role="cell" title="Fewer than 5 refusals">n&lt;5</span>`:`<span class="pct" role="cell">${c.blocked_no_policy_pct}%<span class="mut" style="font-weight:400;font-size:12px"> · ${c.blocked_no_policy}/${c.blocked}</span></span>`}
+function share(c){return c.blocked_suppressed?`<span class="pct na" role="cell" title="Fewer than 5 refusals">n&lt;5</span>`:`<span class="pct" role="cell">${c.blocked_no_policy}/${c.blocked}<span class="mut" style="font-weight:400;font-size:11px"> · ${c.blocked_no_policy_pct}%</span></span>`}
 function sowhat(c){if(c.blocked_suppressed)return"Fewer than 5 refusals; not compared.";const p=c.blocked_no_policy_pct,t=T.blocked_no_policy_pct;
 return p>t?`${p}% of refusals had no policy, vs ${t}% overall.`:p===t?`In line with overall (${p}%).`:`${p}% of refusals had no policy, vs ${t}% overall; policies are more common here.`}
 function drawer(c){const b=c.buckets,P=(v,n)=>`${v} of ${n} (${Math.round(100*v/n)}%)`,cmp=(v,n,tv)=>st.cmp?` <span class="mut">· all ${Math.round(100*tv/T.n)}%</span>`:"";
@@ -172,11 +172,11 @@ return `<div><p class="so">${sowhat(c)}</p><div class="dgrid">
 <div><h3>robots.txt</h3><ul><li>Disallow for agents (or *): ${b.disallow_agents}</li><li>Disallow for training crawlers only: ${b.disallow_training_only}</li><li>Named agents allowed: ${b.named_allowed}</li></ul></div>
 <div><h3>Agent signals</h3><ul><li>llms.txt: ${P(c.llms_txt,c.n)}${cmp(c.llms_txt,c.n,T.llms_txt)}</li><li>/.well-known/ucp: ${P(c.ucp,c.n)}${cmp(c.ucp,c.n,T.ucp)}</li></ul></div></div></div>`}
 function row(c,id,ref){const parts=used.map(g=>[g,g[3](c.buckets)]).filter(x=>x[1]),open=st.open===c.category&&!ref;
-const name=ref?`<span role="rowheader"><b>All sites</b> <span class="mut">(${c.n})</span></span>`:`<span role="rowheader"><button class="rowbtn" aria-expanded="${open}" aria-controls="dr${id}" data-c="${esc(c.category)}"><svg class="ico chev" aria-hidden="true"><use href="#i-chev"/></svg>${esc(c.category)} <span class="mut">(${c.n})</span>${c.small_sample?'<span class="badge" title="n under 15: small sample, directional only">small sample</span>':""}</button></span>`;
+const name=ref?`<span role="rowheader"><b>All sites</b> <span class="mut">(${c.n})</span></span>`:`<span role="rowheader"><button class="rowbtn" aria-expanded="${open}" aria-controls="dr${id}" data-c="${esc(c.category)}"><svg class="ico chev" aria-hidden="true"><use href="#i-chev"/></svg>${esc(c.category)} <span class="mut">(${c.n})</span>${c.small_sample||c.blocked<10?'<span class="badge" title="Small sample (few refusals or n under 15): directional only">small sample</span>':""}</button></span>`;
 return `<div class="row ${ref?"ref":""}" role="row">${name}<div class="bar" role="cell">${parts.map(([g,v])=>seg(g,v,c,id)).join("")}</div>${share(c)}${ref?"":`<div class="drawer ${open?"open":""}" id="dr${id}" role="region" aria-label="${esc(c.category)} breakdown" ${open?"":"hidden"}>${drawer(c)}</div>`}</div>`}
 function render(){chips();const cs=SHOWN.filter(c=>!st.v.length||st.v.includes(c.category));
 const tot={...T,category:"All",blocked_suppressed:false};
-$("chart").innerHTML=`<div class="row h" role="row"><span role="columnheader">Category (n)</span><span class="bh" role="columnheader">Result mix</span><span class="pct" role="columnheader" style="font-weight:400">Of refusals: no policy<span class="hn">bar = share of all sites</span></span></div>`+(st.cmp?row(tot,"all",true):"")+cs.map((c,i)=>row(c,i,false)).join("");writeHash()}
+$("chart").innerHTML=`<div class="row h" role="row"><span role="columnheader">Category (n)</span><span class="bh" role="columnheader">Result mix</span><span class="pct" role="columnheader" style="font-weight:400"><span class="dk">Of refusals: no policy</span><span class="mb" tabindex="0" data-tip="<b>No policy</b><br>Refusals from sites with no published AI-agent rules, out of all refusals in the category.">No policy ⓘ</span><span class="hn">bar = share of all sites</span></span></div>`+(st.cmp?row(tot,"all",true):"")+cs.map((c,i)=>row(c,i,false)).join("");writeHash()}
 document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;
 if(t.dataset.s!==undefined){st.s=st.s===t.dataset.s?"":t.dataset.s;render();document.querySelector(`[data-s="${t.dataset.s}"]`).focus()}
 else if(t.dataset.v!==undefined){const v=t.dataset.v;st.v=st.v.includes(v)?st.v.filter(x=>x!==v):[...st.v,v];render();document.querySelector(`[data-v="${CSS.escape(v)}"]`).focus()}
