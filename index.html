@@ -154,7 +154,7 @@ const G=[["block","Refused, no policy","var(--c-block)",b=>b.no_policy_blocked||
 ["mix","Refused or error (n<5)","var(--c-err)",b=>b.no_policy_blocked_or_error||0,"hatch"]];
 const d=new Date(D.run_date+"T12:00:00Z");
 $("upd").lastElementChild.textContent=`Updated ${d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"})} · daily`;
-$("hsub").innerHTML=`AI agents are being turned away, usually with no stated rules to follow. <b>${T.blocked_no_policy} of ${T.blocked}</b> refusals came with no published AI-agent rules. Refusals mostly occur without a published policy. Base: 83 NRF Top 100 retailers, checked Oct 31, 2026.`;
+$("hsub").innerHTML=`AI agents are being turned away, usually with no stated rules to follow. <b>${T.blocked_no_policy} of ${T.blocked}</b> refusals came with no published AI-agent rules. Base: 83 NRF Top 100 retailers, checked Oct 31, 2026.`;
 const kp=[["Refused",pc(T.blocked,T.n),`${T.blocked} of ${T.n} sites`,`n=${T.n}`],
 ["Refused, no policy",pc(T.blocked_no_policy,T.blocked),`${T.blocked_no_policy} of ${T.blocked} refusals`,`n=${T.blocked}`],
 ["Serve llms.txt <span class=\"g\">(AI-readable site guide)</span>",pc(T.llms_txt,T.n),`${T.llms_txt} of ${T.n} sites`,`n=${T.n}`],
