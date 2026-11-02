@@ -112,7 +112,7 @@ h2{margin:28px 0 8px}#cat{font-size:19px}
 </section>
 
 <div class="kpis" id="kpis"></div>
-<div class="card spark" hidden><div><div style="font-weight:600">Trend</div><div class="mut" style="font-size:12px">Daily series begins Oct 30, 2026.</div></div></div>
+<div class="card spark" hidden><div><div style="font-weight:600">Trend</div><div class="mut" style="font-size:12px">Series begins Oct 30, 2026.</div></div></div>
 
 <h2 id="cat"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><span id="ctitle">Refusal rate by category</span></h2>
 <p class="sub" id="csub">Bars: all sites checked. Right: share refused. 5–6 refusals per category; directional only, not a ranking.</p>
@@ -128,7 +128,7 @@ h2{margin:28px 0 8px}#cat{font-size:19px}
 </section>
 
 <h2 id="lk"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Site-level detail</h2>
-<section class="flat cta" aria-labelledby="lk"><div><b>Full site-level report</b><br><span class="mut">83 sites · daily refresh · status history</span></div><a class="btn" id="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScYukIjtdoUHKAbPR_PF6Rcn-_-QXFUb2s7fFT-fSTxp5CREQ/viewform?usp=header" rel="noopener">Request site-level data<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><span class="mut" style="font-size:12px" id="ctanote">Opens a Google Form (company, role, use case). This page loads no analytics, cookies or third-party scripts.</span><span class="mut" style="font-size:12px;grid-column:1/-1" id="privnote">Privacy: requests are reviewed manually, used only to reply to you, and not shared.</span></section>
+<section class="flat cta" aria-labelledby="lk"><div><b>Full site-level report</b><br><span class="mut">83 sites · weekly refresh · status history</span></div><a class="btn" id="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScYukIjtdoUHKAbPR_PF6Rcn-_-QXFUb2s7fFT-fSTxp5CREQ/viewform?usp=header" rel="noopener">Request site-level data<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><span class="mut" style="font-size:12px" id="ctanote">Opens a Google Form (company, role, use case). This page loads no analytics, cookies or third-party scripts.</span><span class="mut" style="font-size:12px;grid-column:1/-1" id="privnote">Privacy: requests are reviewed manually, used only to reply to you, and not shared.</span></section>
 
 <h2><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg>Notes</h2>
 <details id="d-def"><summary><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Definitions</summary><ul>
@@ -160,7 +160,7 @@ const G=[["block","Refused","var(--c-block)",c=>c.refused,""],
 ["err","Error","var(--c-err)",c=>c.errors,"hatch"],
 ["ok","Not refused","var(--c-ok)",c=>c.n-c.refused-c.errors,""]];
 const d=new Date(D.run_date+"T12:00:00Z");
-$("upd").lastElementChild.textContent=`Updated ${d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"})} · daily`;
+$("upd").lastElementChild.textContent=`Updated ${d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"})} · weekly`;
 $("hsub").innerHTML=`35% refused our labeled agent, at about the same rate with or without published rules.<br>Base: 83 NRF Top 100 retailers, checked Oct 31 and Nov 1, 2026.`;
 const kp=[["No published rules <span class=\"g\">(for AI agents)</span>",pc(T.no_rules,T.n),`${T.no_rules} of ${T.n} sites`,`n=${T.n}`],
 ["Refused <span class=\"g\">(labeled agent)</span>",pc(T.refused,T.n),`${T.refused} of ${T.n} sites`,`n=${T.n}`],
