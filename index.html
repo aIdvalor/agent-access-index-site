@@ -1,16 +1,16 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Agent Access Index: 84% of top US retailers publish no AI-agent rules</title>
-<meta name="description" content="35% refused our labeled agent, at about the same rate with or without published rules. Top US retailers · n=83 · Oct 31 and Nov 1, 2026.">
+<meta name="description" content="35% refused our labeled agent.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="84% of top US retailers publish no AI-agent rules">
-<meta property="og:description" content="35% refused our labeled agent, at about the same rate with or without published rules. Top US retailers · n=83 · Oct 31 and Nov 1, 2026.">
+<meta property="og:description" content="35% refused our labeled agent.">
 <meta property="og:url" content="https://aidvalor.github.io/agent-access-index-site/">
 <meta property="og:image" content="https://aidvalor.github.io/agent-access-index-site/og.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="35% refused our labeled agent, at about the same rate with or without published rules. Top US retailers · n=83 · Oct 31 and Nov 1, 2026.">
+<meta property="og:image:alt" content="35% refused our labeled agent.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="84% of top US retailers publish no AI-agent rules">
-<meta name="twitter:description" content="35% refused our labeled agent, at about the same rate with or without published rules. Top US retailers · n=83 · Oct 31 and Nov 1, 2026.">
+<meta name="twitter:description" content="35% refused our labeled agent.">
 <meta name="twitter:image" content="https://aidvalor.github.io/agent-access-index-site/og.png">
 <style>
 :root{--bg:#fafafa;--card:#fff;--ink:#111;--mut:#595959;--line:#e5e5e5;--acc:#4338ca;
@@ -123,10 +123,12 @@ h2{margin:28px 0 8px}#cat{font-size:19px}
 <div class="chips" hidden id="fv" role="group" aria-label="Filter by vertical"><span class="lbl">Vertical</span></div>
 <div class="chips" hidden><button class="chip" id="cmp" aria-pressed="false">Compare to all</button></div>
 <div id="chart" role="table" aria-label="Result mix by category; share refused at right"></div>
-<p class="src" id="srcline">Source: <a href="https://nrf.com/research-insights/top-retailers/top-100-retailers/top-100-retailers-2026-list" rel="noopener">NRF Top 100 Retailers 2026</a>; checks Oct 31 and Nov 1, 2026; n=83</p>
-<p class="mut" style="font-size:12px;margin:12px 0 0">Two categories with fewer than 5 refusals (8 refusals) are counted in totals only. Select a category for detail.</p>
+<p class="src" id="srcline">Source: <a href="https://nrf.com/research-insights/top-retailers/top-100-retailers/top-100-retailers-2026-list" rel="noopener">NRF Top 100 Retailers 2026</a>; checks 3 dates, Oct 31 to Nov 2, 2026; n=83</p>
+<p class="mut" style="font-size:12px;margin:12px 0 0">Two categories with fewer than 5 refusals (7 refusals) are counted in totals only. Select a category for detail.</p>
 </section>
 
+<h2 id="br"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg>Beyond retail</h2>
+<section class="flat" aria-labelledby="br" id="beyond"><p style="margin:0">80% of the largest North American industrial distributors and 67% of top private goods marketplaces publish no AI-agent rules.</p><p class="mut" style="font-size:12px;margin:8px 0 0">15 sites each, drawn from the 2026 Industrial Distribution Big 50 and the a16z Marketplace 100 rankings, same labeled agent and robots.txt rules, checked Nov 1–2, 2026; refusal rates hidden below 5 refusals.</p></section>
 <h2 id="lk"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Site-level detail</h2>
 <section class="flat cta" aria-labelledby="lk"><div><b>Full site-level report</b><br><span class="mut">83 sites · weekly refresh · status history</span></div><a class="btn" id="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScYukIjtdoUHKAbPR_PF6Rcn-_-QXFUb2s7fFT-fSTxp5CREQ/viewform?usp=header" rel="noopener">Request site-level data<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><span class="mut" style="font-size:12px" id="ctanote">Opens a Google Form (company, role, use case). This page loads no analytics, cookies or third-party scripts.</span><span class="mut" style="font-size:12px;grid-column:1/-1" id="privnote">Privacy: requests are reviewed manually, used only to reply to you, and not shared.</span></section>
 
@@ -136,7 +138,7 @@ h2{margin:28px 0 8px}#cat{font-size:19px}
 <li><b>Published rules</b>: robots.txt names AI agents or crawlers (allow or disallow), or has a Disallow group for <code>*</code>.</li>
 <li><b>Error</b>: timeout or network error, counted as an error, not a refusal.</li>
 <li><b>Not refused</b>: the checked files and homepage loaded normally.</li></ul></details>
-<details id="d-meth"><summary><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg>Method</summary><p>Sites = <a href="https://nrf.com/research-insights/top-retailers/top-100-retailers/top-100-retailers-2026-list" rel="noopener">NRF Top 100 Retailers 2026</a> (ranked by US retail sales), grouped by primary category; niches under 10 merged; one company excluded. A logged-out check of public policy files (robots.txt, llms.txt, /.well-known) and the homepage response, aggregated by category. n=83, Oct 31 and Nov 1, 2026. Dated observations, not statements of intent.</p></details>
+<details id="d-meth"><summary><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg>Method</summary><p>Sites = <a href="https://nrf.com/research-insights/top-retailers/top-100-retailers/top-100-retailers-2026-list" rel="noopener">NRF Top 100 Retailers 2026</a> (ranked by US retail sales), grouped by primary category; niches under 10 merged; one company excluded. A logged-out check of public policy files (robots.txt, llms.txt, /.well-known) and the homepage response, aggregated by category. n=83, 3 dates, Oct 31 to Nov 2, 2026. Dated observations, not statements of intent.</p></details>
 <details id="d-lim" open><summary><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>What we tested and its limits</summary><ul>
 <li><b>One labeled bot.</b> Every request used one honest user agent that names this project and links to it. No browser disguise, logins, cookies or retries around a refusal.</li>
 <li><b>One run per check date, one request per endpoint.</b> Each site got at most one request each to robots.txt, llms.txt, a few /.well-known files and the homepage (plus at most one retry after a timeout), capped at 8 requests, 2 seconds apart.</li>
@@ -144,7 +146,7 @@ h2{margin:28px 0 8px}#cat{font-size:19px}
 <li><b>One vantage point.</b> All checks ran from a single cloud network. Sites may answer other networks, regions or real shoppers differently.</li>
 <li><b>Coverage.</b> 83 of the NRF Top 100. The rest were not covered, including one company excluded over a potential conflict of interest.</li>
 <li><b>What "refused" covers.</b> An HTTP 403 or 429 response, or a bot-challenge or CAPTCHA page, on any checked file. Timeouts and network errors count as errors, not refusals. We did not establish why a site refused.</li>
-<li><b>Stable across two check dates.</b> Oct 31 and Nov 1 gave the same results for every site, from one vantage point.</li>
+<li><b>Changes between check dates.</b> 3 sites changed status since the previous published check (3 dates, Oct 31 to Nov 2, 2026), from one vantage point.</li>
 <li><b>ACP not measured.</b> ACP has no settled public discovery file; ACP checkout runs through agent-platform integrations not visible externally, so it was not measured. 0 sites served the proposed acp.json.</li>
 <li><b>No ranking.</b> Results are aggregated by category. We do not rank or name retailers.</li></ul></details>
 <details id="d-disc"><summary><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg>Disclaimer</summary><p>Independent, non-commercial research. Not affiliated with any company studied or any current or former employer of the author. No logins, CAPTCHAs, rate limits or refusals bypassed. robots.txt is a voluntary standard (RFC 9309), not a contract. Not legal advice. Brand names identify sites only. Corrections or opt-out: use the request form above.</p></details>
@@ -161,7 +163,7 @@ const G=[["block","Refused","var(--c-block)",c=>c.refused,""],
 ["ok","Not refused","var(--c-ok)",c=>c.n-c.refused-c.errors,""]];
 const d=new Date(D.run_date+"T12:00:00Z");
 $("upd").lastElementChild.textContent=`Updated ${d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"})} · weekly`;
-$("hsub").innerHTML=`35% refused our labeled agent, at about the same rate with or without published rules.<br>Base: 83 NRF Top 100 retailers, checked Oct 31 and Nov 1, 2026.`;
+$("hsub").innerHTML=`35% refused our labeled agent.<br>Base: 83 NRF Top 100 retailers, checked 3 dates, Oct 31 to Nov 2, 2026.`;
 const kp=[["No published rules <span class=\"g\">(for AI agents)</span>",pc(T.no_rules,T.n),`${T.no_rules} of ${T.n} sites`,`n=${T.n}`],
 ["Refused <span class=\"g\">(labeled agent)</span>",pc(T.refused,T.n),`${T.refused} of ${T.n} sites`,`n=${T.n}`],
 ["Serve llms.txt <span class=\"g\">(AI-readable site guide)</span>",pc(T.llms_txt,T.n),`${T.llms_txt} of ${T.n} sites`,`n=${T.n}`],
