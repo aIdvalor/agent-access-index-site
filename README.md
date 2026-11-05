@@ -7,3 +7,5 @@ A category-level index of how retail and commerce sites treat AI agents. Logged-
 Dashboard: https://aidvalor.github.io/agent-access-index-site/
 
 Full site-level report: [request access](https://docs.google.com/forms/d/e/1FAIpQLScYukIjtdoUHKAbPR_PF6Rcn-_-QXFUb2s7fFT-fSTxp5CREQ/viewform?usp=header)
+
+Related: [DNR Agent](https://github.com/aIdvalor/dnr-agent) — governed “delivered but not received” resolution agent (synthetic evals). Live demo: https://aidvalor.github.io/dnr-agent/demo/
