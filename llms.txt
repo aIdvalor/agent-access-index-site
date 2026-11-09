@@ -1,0 +1,11 @@
+# Agent Access Index
+
+> A public, category-level index of how top US retailers treat AI shopping agents: published agent rules, refusals of a labeled agent, and agent-discovery files. Logged-out checks of public policy files only. No site-level data is published here.
+
+## Pages
+- [Dashboard](https://aidvalor.github.io/agent-access-index-site/): headline findings, category breakdowns and method notes.
+- [README](https://github.com/aIdvalor/agent-access-index-site#readme): method summary and sample definition.
+
+## Notes
+- Refusal rates are shown only for categories with 5 or more refusals.
+- Site-level report is available on request via the form linked on the dashboard.
