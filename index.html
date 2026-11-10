@@ -85,7 +85,24 @@ body{font-variant-numeric:tabular-nums}
 details{border:0;border-top:1px solid var(--line);border-radius:0;background:none;padding:10px 0;margin:0}
 h2{margin:28px 0 8px}#cat{font-size:19px}
 @media(max-width:680px){.kpis{grid-template-columns:repeat(2,1fr)}.kpis .k:nth-child(3){border-left:0;padding-left:0}.kpis .k:nth-child(n+3){border-top:1px solid var(--line)}.hero h1{font-size:23px}.cta{grid-template-columns:1fr}}
-[hidden]{display:none!important}</style></head><body>
+[hidden]{display:none!important}
+.skip{position:absolute;left:-9999px;top:8px;z-index:30;background:var(--acc);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+.skip:focus,.skip:focus-visible{left:12px}
+.inav{position:sticky;top:0;z-index:8;display:flex;gap:4px 18px;align-items:center;flex-wrap:wrap;min-height:36px;margin:12px -20px 0;padding:0 20px;background:rgba(250,250,250,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.inav a{color:var(--mut);text-decoration:none;font-size:13px;font-weight:600;padding:8px 0;border-bottom:2px solid transparent}
+.inav a:hover,.inav a:focus-visible{color:var(--acc);border-bottom-color:var(--acc)}
+.kicker{margin:10px 0 0;font-size:12px;color:var(--mut)}
+#shelf{text-transform:none;letter-spacing:0;font-size:19px;line-height:1.25;color:var(--ink);font-weight:700;align-items:flex-start}
+.shelf-empty .bar{background:var(--line)}
+.shelf-empty .pct{font-weight:400;color:var(--mut)}
+.aggs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:8px 0 12px}
+.aggs .k{border-top:1px solid var(--line);padding:8px 0}
+.aggs .v{font-size:22px;font-weight:650;color:var(--mut);line-height:1.2}
+.aggs .l{font-size:12px;color:var(--mut)}
+@media(max-width:680px){.aggs{grid-template-columns:repeat(2,1fr)}.inav{margin-left:-20px;margin-right:-20px}}
+@media(prefers-reduced-motion:reduce){.inav{backdrop-filter:none}}
+</style></head><body>
+<a class="skip" href="#h1">Skip to findings</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 17h6"/></symbol>
 <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
@@ -106,6 +123,13 @@ h2{margin:28px 0 8px}#cat{font-size:19px}
 <header class="top"><div class="brand"><svg class="ico" aria-hidden="true"><use href="#i-bot"/></svg>Agent Access Index</div>
 <span class="pill" id="upd"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg><span></span></span></header>
 
+<p class="kicker">Who lets agents in · Who agents send buyers to</p>
+<nav class="inav" aria-label="On this page">
+<a href="#h1">Access</a>
+<a href="#shelf">Shelf</a>
+<a href="#wc">What changed</a>
+<a href="#d-meth">Method</a>
+</nav>
 <section class="card hero" aria-labelledby="h1">
 <h1 id="h1">83% of top US retailers publish no AI-agent rules</h1>
 <div class="sub" id="hsub"></div>
@@ -129,6 +153,39 @@ h2{margin:28px 0 8px}#cat{font-size:19px}
 
 <h2 id="br"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg>Beyond retail</h2>
 <section class="flat" aria-labelledby="br" id="beyond"><p style="margin:0">89% of the largest North American industrial distributors and 67% of top marketplaces publish no AI-agent rules.</p><p class="mut" style="font-size:12px;margin:8px 0 0">45 and 45 sites, drawn in rank order from the 2026 Industrial Distribution Big 50 and the a16z Marketplace 100, same labeled agent and robots.txt rules, checked Nov 9, 2026; refusal rates hidden below 5 refusals. Distributor refusal rate 22% (10 of 45). Marketplace refusal rate 44% (20 of 45).</p></section>
+<h2 id="shelf"><svg class="ico" aria-hidden="true"><use href="#i-cart"/></svg><span id="shelf-h">The first Agent Shelf read publishes November 12</span></h2>
+<section class="flat" aria-labelledby="shelf-h" id="shelf-body">
+<p class="sub">Headphones &amp; earbuds · 20 shopping prompts, sent once a day for three days · free-tier model with web search · retailers by type · brands in aggregate only · not a ranking</p>
+<p>The first read publishes November 12, 2026. Until then this section shows the measures only — no live figures.</p>
+<p class="key"><b class="acc">Routing by retailer type</b></p>
+<div class="shelf-empty" role="table" aria-label="Retailer type share; first figures publish November 12, 2026">
+<div class="row h"><div>Type</div><div class="bh">Share of observed links</div><div class="pct">Share</div></div>
+<div class="row"><div>Marketplace</div><div class="bar" aria-hidden="true"></div><div class="pct na">—</div></div>
+<div class="row"><div>Big-box / mass retailer</div><div class="bar" aria-hidden="true"></div><div class="pct na">—</div></div>
+<div class="row"><div>Electronics specialty</div><div class="bar" aria-hidden="true"></div><div class="pct na">—</div></div>
+<div class="row"><div>Brand DTC (own site)</div><div class="bar" aria-hidden="true"></div><div class="pct na">—</div></div>
+<div class="row"><div>Independent store on a hosted-storefront platform</div><div class="bar" aria-hidden="true"></div><div class="pct na">—</div></div>
+<div class="row"><div>Other</div><div class="bar" aria-hidden="true"></div><div class="pct na">—</div></div>
+</div>
+<p class="key" style="margin-top:16px"><b class="acc">Brand concentration</b> · names not shown</p>
+<div class="aggs">
+<div class="k"><div class="l">Distinct brands</div><div class="v">—</div></div>
+<div class="k"><div class="l">Top-1 share</div><div class="v">—</div></div>
+<div class="k"><div class="l">Top-3 share</div><div class="v">—</div></div>
+<div class="k"><div class="l">Stability across repeats</div><div class="v">—</div></div>
+</div>
+<p class="src">Source: fixed shopping prompts answered by a free-tier model with web search; dated observations, not quality, price, or availability rankings. Method below. First figures: November 12, 2026.</p>
+<details id="d-shelf"><summary><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg>Shelf method and limits</summary>
+<ul>
+<li><b>Panel.</b> 20 headphones-and-earbuds prompts, wording aimed at holiday shopping. Prompts do not name brands.</li>
+<li><b>Cadence.</b> Each prompt is sent three times, once per day, to a free-tier model with web search. Results may differ from paid or consumer assistants shoppers use.</li>
+<li><b>Retailers.</b> Public views group destinations by type only. A private letter map used for concentration is not published. Hosted storefront platforms are not named.</li>
+<li><b>Brands.</b> Reported as a distinct count, top-N concentration, and stability across repeats — never by name on this page.</li>
+<li><b>Signals, not rankings.</b> These are observed link and mention signals in model answers, not a ranking of quality or a shopping recommendation.</li>
+<li><b>No live calls on this page.</b> The public site has no prompt box and no store-test form. Model calls stay in private plumbing.</li>
+</ul>
+</details>
+</section>
 <h2 id="wc"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg>What changed</h2>
 <section class="flat" aria-labelledby="wc" id="whatchanged"><p class="mut" style="font-size:12px;margin:0 0 8px">Category-level only · Nov 9 vs Nov 1, 2026. Site names are never shown.</p><ul style="margin:0;padding-left:18px"><li>Retail overall: share with no published AI-agent rules moved from 84% to 83%.</li><li>Retail overall: refusal rate held at 35%.</li><li>Grocery: refused 3→4 of 15; still below the 5-refusal display threshold.</li><li>Home & hardware: no published rules 10→9 of 13 (small sample, directional only).</li><li>Retail agent signals: llms.txt 14→15 sites; UCP 4→5 sites.</li><li>Beyond retail: modules expanded from 15 to 45 industrial distributors and 15 to 45 marketplaces (new sample; rates not same-n week-over-week). No-rules rates are now 89% (distributors) and 67% (marketplaces).</li></ul></section>
 <h2 id="lk"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Site-level detail</h2>
