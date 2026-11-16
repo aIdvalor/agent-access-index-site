@@ -1,6 +1,6 @@
 # Agent Access Index
 
-A category-level index of how retail and commerce sites treat AI agents. Logged-out weekly check of public policy files, n=83 sites from the NRF Top 100 Retailers 2026, checked 3 dates, Oct 31 to Nov 9, 2026.
+A category-level index of how retail and commerce sites treat AI agents. Logged-out weekly check of public policy files, n=83 sites from the NRF Top 100 Retailers 2026, checked 4 dates, Oct 31 to Nov 16, 2026.
 
 **Finding:** 83% of top US retailers (69 of 83) publish no AI-agent rules. 35% (29 of 83) refused our labeled agent.
 
