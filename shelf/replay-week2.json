@@ -1,0 +1,104 @@
+{
+ "version": 1,
+ "recorded": "2026-11-16",
+ "panel": "Agent Shelf week 2 (Nov 16–18, 2026), headphones & earbuds",
+ "model": "free-tier model with web search",
+ "question": "Holiday gift idea: wireless earbuds for a runner who needs a secure fit, on sale.",
+ "intro": "For a runner who needs a secure fit, several earbuds combine stability, sweat resistance and holiday discounts.",
+ "steps": [
+  {
+   "text": "A wingtip pair that locks into the ear ridge, with physical buttons and sweat resistance. Noted on sale, up to 36% off.",
+   "links": [
+    0,
+    1
+   ]
+  },
+  {
+   "text": "An ear-hook pair with an “unshakeable fit” and up to 10 hours per charge.",
+   "links": [
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "text": "A value pair with soft silicone wings that often drops in price during sales.",
+   "links": [
+    6
+   ]
+  },
+  {
+   "text": "A budget ear-hook pair with long battery life and a charging cable built into the case.",
+   "links": [
+    7
+   ]
+  },
+  {
+   "text": "Many stores are already running early holiday discounts on these models.",
+   "links": [
+    8,
+    9
+   ]
+  }
+ ],
+ "links": [
+  {
+   "n": 1,
+   "kind": "brand",
+   "label": "Brand's own site"
+  },
+  {
+   "n": 2,
+   "kind": "review",
+   "label": "Review site"
+  },
+  {
+   "n": 3,
+   "kind": "review",
+   "label": "Review site"
+  },
+  {
+   "n": 4,
+   "kind": "review",
+   "label": "Review site"
+  },
+  {
+   "n": 5,
+   "kind": "review",
+   "label": "Review site"
+  },
+  {
+   "n": 6,
+   "kind": "review",
+   "label": "Review site"
+  },
+  {
+   "n": 7,
+   "kind": "brand",
+   "label": "Brand's own site"
+  },
+  {
+   "n": 8,
+   "kind": "store",
+   "label": "Electronics store"
+  },
+  {
+   "n": 9,
+   "kind": "store",
+   "label": "Big-box store"
+  },
+  {
+   "n": 10,
+   "kind": "brand",
+   "label": "Brand's own site"
+  }
+ ],
+ "tally": {
+  "Brand's own site": 3,
+  "Review site": 5,
+  "Electronics store": 1,
+  "Big-box store": 1
+ },
+ "note": "Recorded answer from Nov 16, 2026, abridged. Product and brand names are replaced with descriptions; every cited link is shown by site type only. Nothing on this page calls a model."
+}

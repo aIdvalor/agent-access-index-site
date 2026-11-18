@@ -6,8 +6,10 @@ A category-level index of how retail and commerce sites treat AI agents. Logged-
 
 Dashboard: https://aidvalor.github.io/agent-access-index-site/
 
-**Agent Shelf:** a method-first section is on the dashboard. The first read publishes November 12, 2026. Retailers are shown by type only; brands in aggregate only.
+**Agent Shelf:** when an AI assistant with web search answered 20 headphone-shopping prompts (Nov 16–18, 2026; 58 of 60 calls), store pages got 12.3% of the cited links (78 of 634) and review and media sites got 45.6%. Stores are shown by type only; brands in aggregate only. The dashboard replays one recorded answer, link by link. It is a recording: the page calls no model and loads nothing from other sites.
 
 Full site-level report: [request access](https://docs.google.com/forms/d/e/1FAIpQLScYukIjtdoUHKAbPR_PF6Rcn-_-QXFUb2s7fFT-fSTxp5CREQ/viewform?usp=header)
 
 Related: [DNR Agent](https://github.com/aIdvalor/dnr-agent) — governed “delivered but not received” resolution agent (synthetic evals). Live demo: https://aidvalor.github.io/dnr-agent/demo/
+
+Tests (local, no network): `cd tests && npm install && npm test` serves the site, drives every control, and fails on any non-local request or CSP violation.

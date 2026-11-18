@@ -1,0 +1,7 @@
+{
+  "name": "agent-access-index-site-tests",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node no-network.test.mjs" },
+  "devDependencies": { "playwright-core": "1.56.1" }
+}
