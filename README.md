@@ -6,7 +6,7 @@ A category-level index of how retail and commerce sites treat AI agents. Logged-
 
 Dashboard: https://aidvalor.github.io/agent-access-index-site/
 
-**Agent Shelf:** when an AI assistant with web search answered 20 headphone-shopping prompts (Nov 16–18, 2026; 58 of 60 calls), store pages got 12.3% of the cited links (78 of 634) and review and media sites got 45.6%. Stores are shown by type only; brands in aggregate only. The dashboard replays one recorded answer, link by link. It is a recording: the page calls no model and loads nothing from other sites.
+**Agent Shelf:** when an AI assistant with web search answered 20 headphone-shopping prompts (Nov 16–18, 2026; 58 of 60 calls), store pages got 18.3% of the cited links (116 of 634) and review and media sites got 57.6%. Stores are shown by type only; brands in aggregate only. The dashboard replays one recorded answer, link by link. It is a recording: the page calls no model and loads nothing from other sites.
 
 Full site-level report: [request access](https://docs.google.com/forms/d/e/1FAIpQLScYukIjtdoUHKAbPR_PF6Rcn-_-QXFUb2s7fFT-fSTxp5CREQ/viewform?usp=header)
 
